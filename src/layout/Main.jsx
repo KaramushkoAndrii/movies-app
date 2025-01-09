@@ -6,7 +6,7 @@ import Search from "../components/Search/Search";
 import Preloader from "../components/Preloader/Preloader";
 
 const API_KEY = process.env.REACT_APP_API_KEY;
-const MAIN__API = `http://www.omdbapi.com/?apikey=${API_KEY}&s=`
+const MAIN__API = `https://www.omdbapi.com/?apikey=${API_KEY}&s=`
 
 const Main = () => {
 
