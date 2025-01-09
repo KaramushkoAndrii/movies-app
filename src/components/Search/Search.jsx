@@ -1,9 +1,13 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-const Search = ({searchValue}) => {
+const Search = ({searchValue, initialSearch}) => {
 
-    const [handleSearch, setHandleSearch] = useState('');
+    const [handleSearch, setHandleSearch] = useState(initialSearch);
     const [typeOfSearch, setTypeOfSearch] = useState('all')
+
+    useEffect(() => {
+        setHandleSearch(initialSearch)
+    }, [initialSearch])
 
     const searchFilm = (e) => {
         setHandleSearch(e.target.value)

@@ -5,13 +5,13 @@ import MovieCard from '../MovieCard/MovieCard';
 
 
 
-const MovieList = ({movies}) => {
+const MovieList = ({movies = []}) => {
 
     return (
         <ul className='movies'>
-            {movies.map(item => (
+            {movies.length ? movies.map(item => (
                 <MovieCard key={item.imdbID} {...item}/>       
-            ))}
+            )) : <h4>Nothing not found</h4>}
         </ul>
     )
 }
