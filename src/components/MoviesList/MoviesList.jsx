@@ -1,6 +1,4 @@
 
-
-
 import MovieCard from '../MovieCard/MovieCard';
 
 
